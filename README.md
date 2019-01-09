@@ -1,4 +1,4 @@
-# phonepage
+# phone-index
 
 ## Project setup
 ```

@@ -1,5 +1,5 @@
 {
-  "name": "phonepage",
+  "name": "phone-index",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,30 +8,33 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "vant": "^1.5.0",
-    "vue": "^2.5.17",
-    "vue-class-component": "^6.0.0",
-    "vue-property-decorator": "^7.0.0",
+    "cssnano": "^4.1.8",
+    "postcss-aspect-ratio-mini": "^1.0.1",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-px-to-viewport": "0.0.3",
+    "postcss-viewport-units": "^0.1.6",
+    "postcss-write-svg": "^3.0.1",
+    "vue": "^2.5.21",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.2.0",
-    "@vue/cli-plugin-typescript": "^3.2.0",
+    "@vue/cli-plugin-eslint": "^3.2.0",
     "@vue/cli-service": "^3.2.0",
-    "autoprefixer": "^9.4.3",
-    "babel-plugin-import": "^1.11.0",
-    "cssnano": "^4.1.8",
+    "autoprefixer": "^9.4.4",
+    "babel-eslint": "^10.0.1",
+    "compression-webpack-plugin": "^2.0.0",
     "cssnano-preset-advanced": "^4.0.6",
+    "echarts": "^4.2.0-rc.2",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.9.0",
-    "postcss-aspect-ratio-mini": "^1.0.1",
-    "postcss-cssnext": "^3.1.0",
     "postcss-import": "^12.0.1",
-    "postcss-px-to-viewport": "0.0.3",
     "postcss-url": "^8.0.0",
-    "postcss-write-svg": "^3.0.1",
     "sass-loader": "^7.0.1",
-    "typescript": "^3.0.0",
-    "vue-template-compiler": "^2.5.17"
+    "vant": "^1.5.1",
+    "vconsole-webpack-plugin": "^1.4.2",
+    "vue-template-compiler": "^2.5.21"
   }
 }

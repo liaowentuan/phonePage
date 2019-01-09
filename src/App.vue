@@ -1,39 +1,84 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="searchBox">
+
     </div>
-    <router-view/>
+    <div class="contant">
+      <router-view/>
+    </div>
+    <van-tabbar v-model="active" @change="changeBar">
+      <van-tabbar-item v-for="(item,index) in barArr" :key="index">{{item.barItemName}}</van-tabbar-item>
+    </van-tabbar>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
+<script>
+export default {
+  data () {
+    return {
+      active: 1,
+      barArr: [
+        {
+          url: 'vueCli',
+          barItemName: 'vue'
+        },{
+          url: 'python',
+          barItemName: 'python'
+        },{
+          url: 'server',
+          barItemName: 'server'
+        },{
+          url: 'computer',
+          barItemName: 'computer'
+        },{
+          url: 'more',
+          barItemName: 'more'
+        },
+      ]
+    }
+  },
+  mounted () {
+    this.$nextTick(() => {
+      this.active = 0
+      this.changeBar(0)
+    })
+  },
+  methods: {
+    changeBar (active) {
+      this.$router.push({path: this.barArr[active].url})
     }
   }
 }
-@svg square { 
-  @rect { 
-    fill: var(--color, black); 
-    width: 100%; 
-    height: 100%; 
-  } 
-} 
-#example { 
-  background: white svg(square param(--color #00b1ff)); 
+</script>
+
+<style lang="scss">
+#app {
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.contant{
+  position: fixed;
+  top: 50px;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  overflow: auto;
+}
+#searchBox {
+  width: 375px;
+  height: 50px;
+  background: red;
+}
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+a{
+  color:#333;
+  text-decoration: none;
 }
 </style>
