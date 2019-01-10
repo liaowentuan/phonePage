@@ -10,14 +10,17 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 // const baseUrl = process.env.NODE_ENV === "production" ? "/static/" : "/"; //font scss资源路径 不同环境切换控制
 
 module.exports = {
-	//基本路径
-	baseUrl: './', // 启用相对路径
+	//基本路径 3.2.0
+	baseUrl: '././', // 启用相对路径(vue 默认删除开头的./    如果要加上./，请使用 ././) vue-cli =>3.2.0
+	//基本路径 3.3.0
+	// publicPath： './', //  vue-cli =>3.3.0
+
 	// //输出文件目录
 	outputDir: 'dist',
 	// // eslint-loader 是否在保存的时候检查
 	lintOnSave: true,
 	// //放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputDir 的) 目录。
-	assetsDir: 'static',
+	assetsDir: './static',
 	// //以多页模式构建应用程序。
 	// pages: undefined,
 	// //是否使用包含运行时编译器的 Vue 构建版本
